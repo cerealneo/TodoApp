@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // 로컬스테이지에 추가하가
+    // 로컬스테이지에 추가하기
     function addTodoItem(todoValue) {
         const listItem = document.createElement('li');
         listItem.className = 'd-flex list-group-item';
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const listBtn = document.createElement('button');
         listBtn.className = 'btn-close ms-auto';
         
-        // 삭제
+        //삭제
         listBtn.onclick = function(e) {
             let pNode = e.target.parentNode;
             todoList.removeChild(pNode);
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
             listItem.innerHTML = '';
             listItem.appendChild(input);
 
-            //엔터시 수정
+            //수정(엔터시 입력)
             input.addEventListener('keypress', function(event) {
                 if (event.key === 'Enter') {
                     listItem.innerHTML = input.value + ' ';
